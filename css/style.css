@@ -524,7 +524,6 @@ body._modal::before {
 @media (max-width: 1023.98px) {
   .menu .menu__wrapper {
     flex-direction: column;
-    position: relative;
   }
 }
 .naigation-menu {
@@ -571,8 +570,8 @@ body._modal::before {
 }
 @media (max-width: 1023.98px) {
   .cart-menu {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 50%;
     left: -100%;
     transition: all 0.5s ease 0s;
     margin: 0;
@@ -580,6 +579,7 @@ body._modal::before {
     max-height: 50rem;
     border-radius: 1.8rem;
     overflow-y: scroll;
+    transform: translateY(-50%);
   }
   .cart-menu._active {
     left: 0;
